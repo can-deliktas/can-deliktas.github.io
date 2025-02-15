@@ -1,6 +1,8 @@
 
 <h1 align="center">Hi 👋, I'm Can Deliktaş</h1>
 
+### Junior Cyber Security | Open Source Contributor
+
 ## 🌐 Socials:
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:can.deliktas@protonmail.com) 
 
