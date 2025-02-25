@@ -39,14 +39,25 @@
             max-width: 100%;
             border-radius: 10px;
         }
-        .github-stats img {
-            margin: 10px 0;
+        .github-stats img,
+        .github-streak img,
+        .github-languages img {
+            width: 100%;
+            border-radius: 10px;
         }
         .stats-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly; /* Ensures even spacing */
+            align-items: flex-start; /* Aligns items to the top */
             flex-wrap: wrap;
             gap: 20px;
+        }
+        .github-stats,
+        .github-streak,
+        .github-languages {
+            flex: 1;
+            max-width: 320px; /* Prevents items from becoming too large */
+            min-width: 280px; /* Ensures they don’t shrink too small */
         }
         .quote-container {
             margin-top: 40px;
@@ -70,6 +81,7 @@
         <a href="https://github.com/can-deliktas">
             <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" alt="GitHub">
         </a>
+        
         <!-- Tech Stack -->
         <h2>💻 Tech Stack:</h2>
         <div class="badge">
@@ -102,11 +114,9 @@
             <div class="github-stats">
                 <img src="https://github-readme-stats.vercel.app/api?username=can-deliktas&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="GitHub Stats">
             </div>
-        </a>
             <div class="github-streak">
                 <img src="https://github-readme-streak-stats.herokuapp.com/?user=can-deliktas&theme=dark&hide_border=false" alt="GitHub Streak">
             </div>
-        </a>
             <div class="github-languages">
                 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=can-deliktas&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="Top Languages">
             </div>
