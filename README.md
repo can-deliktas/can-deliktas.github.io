@@ -23,6 +23,17 @@
 [![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
 [![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white)](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white)
 
+## 🔭 Current Interests & Projects
+
+I am currently working on various exciting projects in the field of Cybersecurity and Open Source. Here are a few that I'm focusing on:
+
+- **[PassForge](https://github.com/can-deliktas/PassForge)**: A powerful and customizable password generator and strength evaluator written in Python, focused on enhancing password security through easy-to-use features like strength evaluation and clipboard integration.
+- **Cybersecurity Tools**: Developing various scripts and tools to analyze and secure systems, as well as exploring vulnerabilities and solutions.
+- **Contributing to Open Source**: Actively contributing to projects related to cybersecurity and privacy, sharing knowledge, and enhancing community-driven tools.
+- **Web Development**: Exploring full-stack development with a focus on security, aiming to create secure and optimized web applications.
+
+If you're interested in any of these projects or want to collaborate, feel free to reach out! 😊
+
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=can-deliktas&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=can-deliktas&theme=dark&hide_border=false)<br/>
