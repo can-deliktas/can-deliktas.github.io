@@ -1,4 +1,4 @@
-<h1 align="center">Merhaba 👋, Ben Can Deliktaş</h1>
+<h1 align="center">Merhaba 👋, Ben Can Arkadaş Deliktaş</h1>
 
 ### Junior Siber Güvenlik Uzmanı | Açık Kaynak Katkıcısı
 
