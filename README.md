@@ -36,6 +36,7 @@ I am currently working on various exciting projects in the field of Cybersecurit
 - **Contributing to Open Source**: Actively contributing to projects related to cybersecurity and privacy, sharing knowledge, and enhancing community-driven tools.
 - **Web Development**: Exploring full-stack development with a focus on security, aiming to create secure and optimized web applications.
 - **Functional and Practical Programs**: Working on functional programs and developing applications that simplify daily computer tasks and improve productivity.
+- **Artificial Intelligence and Machine Learning**: Exploring intelligent systems that solve real-world problems efficiently, experimenting with adaptive AI models, and applying AI techniques in cybersecurity, automation, and data analysis to create innovative, practical, and cutting-edge solutions.
 
 If you're interested in any of these projects or want to collaborate, feel free to reach out! 😊
 
