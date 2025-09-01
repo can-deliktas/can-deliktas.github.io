@@ -35,6 +35,7 @@ I am currently working on various exciting projects in the field of Cybersecurit
 - **Cybersecurity Tools**: Developing various scripts and tools to analyze and secure systems, as well as exploring vulnerabilities and solutions.
 - **Contributing to Open Source**: Actively contributing to projects related to cybersecurity and privacy, sharing knowledge, and enhancing community-driven tools.
 - **Web Development**: Exploring full-stack development with a focus on security, aiming to create secure and optimized web applications.
+- **Functional and Practical Programs**: Working on functional programs and developing applications that simplify daily computer tasks and improve productivity.
 
 If you're interested in any of these projects or want to collaborate, feel free to reach out! 😊
 
