@@ -34,6 +34,7 @@
 - **Siber Güvenlik Araçları**: Sistemleri analiz etmek ve güvenliğini sağlamak için çeşitli betikler ve araçlar geliştiriyorum, ayrıca zafiyetleri araştırıyor ve çözümler üretiyorum.
 - **Açık Kaynak Katkıları**: Siber güvenlik ve gizlilikle ilgili projelere aktif katkıda bulunuyorum, bilgi paylaşıyor ve topluluk odaklı araçları geliştiriyorum.
 - **Web Geliştirme**: Güvenlik odaklı full-stack geliştirmeyi keşfediyor, güvenli ve optimize edilmiş web uygulamaları oluşturmayı hedefliyorum.
+- **Fonksiyonel ve Pratik Programlar**: İşlevsel programlar üzerinde çalışıyorum ve günlük bilgisayar görevlerini basitleştiren ve üretkenliği artıran uygulamalar geliştiriyorum.
 
 Eğer bu projelerden herhangi biri ilginizi çekiyorsa veya işbirliği yapmak isterseniz, bana ulaşabilirsiniz! 😊
 
