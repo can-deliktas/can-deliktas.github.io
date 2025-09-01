@@ -35,6 +35,7 @@
 - **Açık Kaynak Katkıları**: Siber güvenlik ve gizlilikle ilgili projelere aktif katkıda bulunuyorum, bilgi paylaşıyor ve topluluk odaklı araçları geliştiriyorum.
 - **Web Geliştirme**: Güvenlik odaklı full-stack geliştirmeyi keşfediyor, güvenli ve optimize edilmiş web uygulamaları oluşturmayı hedefliyorum.
 - **Fonksiyonel ve Pratik Programlar**: İşlevsel programlar üzerinde çalışıyorum ve günlük bilgisayar görevlerini basitleştiren ve üretkenliği artıran uygulamalar geliştiriyorum.
+- **Yapay Zeka ve Makine Öğrenimi**: Gerçek dünya problemlerini verimli bir şekilde çözen akıllı sistemleri keşfediyor, uyarlanabilir yapay zeka modelleriyle deneyler yapıyor ve yapay zeka tekniklerini siber güvenlik, otomasyon ve veri analizi alanlarında uygulayarak yenilikçi, pratik ve ileri düzey çözümler üretiyorum.
 
 Eğer bu projelerden herhangi biri ilginizi çekiyorsa veya işbirliği yapmak isterseniz, bana ulaşabilirsiniz! 😊
 
