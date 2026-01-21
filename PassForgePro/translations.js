@@ -563,6 +563,7 @@ const translations = {
         hero_btn_tour: "Protokolü Denetle",
         hero_btn_tour2: "Katkıda Bulun",
 
+        setup_step_switch: "Proje Dizinine Geç",
         feat_lock_h: "Otonom Kilitleme",
         feat_lock_p: "Pasif izleme döngüsü devrede. Hareketsizlik durumunda kasa belleği anında temizlenir. Adli iz bırakmaz. Kullanıcı müdahalesi gerekmez.",
         feat_wipe_h: "Gürültülü Sektör Silme",
@@ -1174,3 +1175,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(defaultLang);
     initDynamicWallpaper();
 });
+
