@@ -15,7 +15,7 @@ const translations = {
         hero_h1_1: "Indestructible",
         hero_h1_2: "Identity.",
         hero_p: "Forged in the fires of advanced cryptography. PassForge Pro is a zero-vulnerability vault environment designed to withstand even the most aggressive state-level forensic analysis. Our architecture ensures that your data remains inaccessible to unauthorized entities, even in the event of a total system compromise.",
-        hero_btn_dl: "Mount Vault 14.3",
+        hero_btn_dl: "Mount Vault",
         hero_btn_tour: "Audit The Protocol",
 
         feat_lock_h: "Autonomous Lockdown",
@@ -1175,6 +1175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(defaultLang);
     initDynamicWallpaper();
 });
+
 
 
 
