@@ -28,7 +28,7 @@ const translations = {
         setup_h1: "Installation & System Initialization",
         setup_p: "Deploy PassForge Pro across your infrastructure with minimal latency and maximum stealth.",
         setup_pre: "System Requirements",
-        setup_pre_list: "Windows 10/11 Architecture and Linux, Python 3.8+ Interface, Admin-level privileges for Ghost Protocol mounting.",
+        setup_pre_list: "Windows 10/11 or Linux Architecture, Python 3.8+ Interface, Admin-level privileges for Ghost Protocol mounting.",
         setup_step1: "Clone Core Repository",
         setup_step2: "Sync Dependencies",
         setup_step3: "Initialize Bootloader",
@@ -229,7 +229,7 @@ const translations = {
         opsec_q1: "What metadata does PassForge store?",
         opsec_a1: "PassForge stores: Vault location path, Last access timestamp, Language preference, Theme selection. NOT stored: IP addresses, usage analytics, telemetry, cloud sync data. All sensitive metadata (entry titles, URLs, usernames) is encrypted within the vault.",
         opsec_q2: "Does PassForge work on Linux/macOS?",
-        opsec_a2: "Partially. PassForge is primarily designed for Windows and linux. macOS compatibility requires modifications: Remove UAC elevation code, Replace Windows-specific APIs (ctypes.windll), Adjust file path handling. Core cryptography (PBKDF2, Fernet, bcrypt) is cross-platform compatible.",
+        opsec_a2: "Partially. PassForge is primarily designed for Windows or linux. macOS compatibility requires modifications: Remove UAC elevation code, Replace Windows-specific APIs (ctypes.windll), Adjust file path handling. Core cryptography (PBKDF2, Fernet, bcrypt) is cross-platform compatible.",
         opsec_q3: "Can I use PassForge completely offline?",
         opsec_a3: "Yes, 100%. PassForge makes ZERO network calls. No telemetry, no update checks, no cloud sync, no analytics. The application is designed for air-gapped environments and operates entirely locally.",
         opsec_q4: "What forensic traces are left after use?",
@@ -384,7 +384,7 @@ const translations = {
         code_stealth_p: "The Ghost Protocol generates decoy files in system directories to mask the application signature. Silent UAC elevation uses recursive ShellExecute calls with hidden console windows and linux. Secure delete overwrites file contents with random data before unlinking.",
         limitations_h: "Known Limitations",
         limitations_intro: "We believe in transparency. Here are the current limitations of PassForge Pro that we're actively working to address:",
-        limit_1: "Windows and Linux: Requires Windows 10/11 and Linux with Python 3.8+",
+        limit_1: "Windows or Linux: Requires Windows 10/11 or Linux with Python 3.8+",
         limit_2: "No cloud sync: Data remains strictly local (intentional security design)",
         limit_3: "Manual backup required: Users must manually export vault backups",
         limit_4: "Single-user vault: No shared access or team features in current version",
@@ -574,7 +574,7 @@ const translations = {
         setup_h1: "Kurulum ve Sistem Başlatma",
         setup_p: "PassForge Pro'yu altyapınıza sıfır açıkla kurun.",
         setup_pre: "Sistem Gereksinimleri",
-        setup_pre_list: "Windows ve Linux Mimarisi, Python Arayüzü, Yönetici Yetkileri. PassForge Pro, şifreli temelini oluşturmak için temiz bir ortam gerektirir.",
+        setup_pre_list: "Windows veya Linux Mimarisi, Python Arayüzü, Yönetici Yetkileri. PassForge Pro, şifreli temelini oluşturmak için temiz bir ortam gerektirir.",
         setup_step1: "Çekirdek Depoyu Klonla",
         setup_step2: "Bağımlılıkları Eşle",
         setup_step3: "Önyükleyiciyi Başlat",
@@ -696,7 +696,7 @@ const translations = {
         opsec_q1: "PassForge hangi metadata'yı saklar?",
         opsec_a1: "PassForge şunları saklar: Kasa konum yolu, Son erişim zaman damgası, Dil tercihi, Tema seçimi. SAKLANMAZ: IP adresleri, kullanım analitiği, telemetri, bulut senkronizasyon verileri. Tüm hassas metadata (giriş başlıkları, URL'ler, kullanıcı adları) kasa içinde şifrelenir.",
         opsec_q2: "PassForge Linux/macOS'ta çalışır mı?",
-        opsec_a2: "Kısmen. PassForge öncelikle Windows ve Linux için tasarlanmıştır. macOS uyumluluğu değişiklikler gerektirir: UAC yükseltme kodunu kaldırın, Windows'a özgü API'leri değiştirin (ctypes.windll), Dosya yolu işlemeyi ayarlayın. Çekirdek kriptografi (PBKDF2, Fernet, bcrypt) platformlar arası uyumludur.",
+        opsec_a2: "Kısmen. PassForge öncelikle Windows veya Linux için tasarlanmıştır. macOS uyumluluğu değişiklikler gerektirir: UAC yükseltme kodunu kaldırın, Windows'a özgü API'leri değiştirin (ctypes.windll), Dosya yolu işlemeyi ayarlayın. Çekirdek kriptografi (PBKDF2, Fernet, bcrypt) platformlar arası uyumludur.",
         opsec_q3: "PassForge'u tamamen çevrimdışı kullanabilir miyim?",
         opsec_a3: "Evet, %100. PassForge SIFIR ağ çağrısı yapar. Telemetri yok, güncelleme kontrolü yok, bulut senkronizasyonu yok, analitik yok. Uygulama hava boşluklu ortamlar için tasarlanmıştır ve tamamen yerel olarak çalışır.",
         opsec_q4: "Kullanım sonrası hangi forensic izler kalır?",
@@ -830,7 +830,7 @@ const translations = {
         code_stealth_p: "Ghost Protokolü, uygulama imzasını maskelemek için sistem dizinlerinde sahte dosyalar oluşturur. Sessiz UAC yükseltmesi, gizli konsol pencereleri ile özyinelemeli ShellExecute çağrıları kullanır. Güvenli silme, bağlantıyı kaldırmadan önce dosya içeriklerini rastgele verilerle üzerine yazar.",
         limitations_h: "Bilinen Sınırlamalar",
         limitations_intro: "Şeffaflığa inanıyoruz. PassForge Pro'nun aktif olarak üzerinde çalıştığımız mevcut sınırlamaları:",
-        limit_1: "Windows ve Linux: Python 3.8+ ile Windows 10/11 ve Linux gerektirir (Linux ortamında çalışıyor fakat bazı işlemler linux için daha iyi hale getirilebilir!)",
+        limit_1: "Windows veya Linux: Python 3.8+ ile Windows 10/11 ve Linux gerektirir (Linux ortamında çalışıyor fakat bazı işlemler linux için daha iyi hale getirilebilir!)",
         limit_2: "Bulut senkronizasyonu yok: Veriler kesinlikle yerel kalır (kasıtlı güvenlik tasarımı)",
         limit_3: "Manuel yedekleme gerekli: Kullanıcılar kasa yedeklerini manuel olarak dışa aktarmalıdır",
         limit_4: "Tek kullanıcılı kasa: Mevcut sürümde paylaşımlı erişim veya ekip özellikleri yok",
@@ -1175,5 +1175,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(defaultLang);
     initDynamicWallpaper();
 });
+
 
 
