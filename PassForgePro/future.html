@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Enhancements | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="padding-top: 120px;">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 6rem; text-align: center;">
+            <h1 style="font-size: 4rem; margin-bottom: 1.5rem;" data-i18n="future_h1">Future Enhancements</h1>
+            <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 800px; margin: 0 auto;"
+                data-i18n="future_intro_p">
+                The evolution roadmap for PassForge Pro. These features are planned for future releases to enhance
+                security and usability.
+            </p>
+        </header>
+
+        <!-- Secure Search Feature -->
+        <section class="glass-card animate" style="margin-bottom: 4rem; border: 2px solid var(--accent);">
+            <div class="ai-badge" data-i18n="coming_soon">COMING SOON</div>
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 3rem;">🔍</span>
+                <h2 class="grad-text" style="font-size: 2.5rem;" data-i18n="secure_search_h">Secure Search</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem; font-size: 1.1rem;"
+                data-i18n="secure_search_p">
+                A revolutionary encrypted search index that allows you to find vault entries without decrypting the
+                entire database. Using homomorphic-inspired techniques, searches are performed on encrypted data,
+                ensuring your queries never expose plaintext patterns.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div
+                    style="background: rgba(0, 245, 255, 0.05); padding: 1.5rem; border-radius: 15px; border: 1px solid var(--glass-border);">
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="search_feat_1_h">Encrypted Index
+                    </h4>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="search_feat_1_p">Search tokens are
+                        hashed before indexing, making reverse-engineering impossible.</p>
+                </div>
+                <div
+                    style="background: rgba(0, 245, 255, 0.05); padding: 1.5rem; border-radius: 15px; border: 1px solid var(--glass-border);">
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="search_feat_2_h">Zero Memory
+                        Leak</h4>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="search_feat_2_p">Search results are
+                        immediately purged from RAM after display.</p>
+                </div>
+                <div
+                    style="background: rgba(0, 245, 255, 0.05); padding: 1.5rem; border-radius: 15px; border: 1px solid var(--glass-border);">
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="search_feat_3_h">Fuzzy Matching
+                    </h4>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="search_feat_3_p">Find entries even
+                        with partial or misspelled queries using secure fuzzy algorithms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- P2P Mesh Sync -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 3rem;">🌐</span>
+                <h2 class="grad-text" style="font-size: 2.5rem;" data-i18n="future_sync_h">P2P Mesh Sync</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; font-size: 1.1rem;" data-i18n="future_sync_full_p">
+                Decentralized database synchronization across air-gapped devices. No central server. No cloud
+                dependency. Your vaults sync directly between your trusted devices using end-to-end encrypted mesh
+                networking protocols. Perfect for secure enterprise environments where cloud storage is prohibited.
+            </p>
+        </section>
+
+        <!-- Hardware Key -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 3rem;">🔑</span>
+                <h2 class="grad-text" style="font-size: 2.5rem;" data-i18n="future_hw_h">Physical Hardware Key</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; font-size: 1.1rem;" data-i18n="future_hw_full_p">
+                Transform any standard USB flash drive into a cryptographic hardware key. The Master Salt is split
+                between your password (something you know) and the USB key (something you have). Even if your password
+                is compromised, the vault remains locked without the physical key. This two-factor approach provides
+                bank-grade security for your sensitive data.
+            </p>
+        </section>
+
+        <!-- Biometric Integration -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 3rem;">👁️</span>
+                <h2 class="grad-text" style="font-size: 2.5rem;" data-i18n="future_bio_h">Biometric Entrenchment</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; font-size: 1.1rem;" data-i18n="future_bio_full_p">
+                Integration with Windows Hello TPM 2.0 modules for hardware-backed biometric keys. Your fingerprint or
+                facial recognition becomes part of the encryption chain, stored securely in the Trusted Platform Module.
+                This ensures that only your biological identity can unlock the vault, even if all other credentials are
+                compromised.
+            </p>
+        </section>
+
+        <!-- System Disadvantages -->
+        <section class="glass-card animate" style="margin-bottom: 4rem; border-left: 3px solid #FF9500;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">⚠️</span>
+                <h2 style="font-size: 2rem; color: #FF9500;" data-i18n="limitations_h">Current Limitations</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 1.5rem;" data-i18n="limitations_intro">
+                We believe in transparency. Here are the current limitations of PassForge Pro that we're actively
+                working to address:
+            </p>
+            <ul style="color: var(--text-dim); line-height: 2.2; padding-left: 2rem;">
+                <li data-i18n="limit_1">Windows-only: Requires Windows 10/11 with Python 3.8+</li>
+                <li data-i18n="limit_2">No cloud sync: Data remains strictly local (intentional security design)</li>
+                <li data-i18n="limit_3">Manual backup required: Users must manually export vault backups</li>
+                <li data-i18n="limit_4">Single-user vault: No shared access or team features in current version</li>
+                <li data-i18n="limit_5">No mobile app: Desktop-only application currently</li>
+                <li data-i18n="limit_6">Python dependency: Requires Python runtime installation</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Page loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 800);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

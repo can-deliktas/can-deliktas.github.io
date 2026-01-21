@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassForge Pro | The Unbreakable Vault</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-img-container">
+            <img src="images/hero.png" class="hero-img" alt="Digital Shield">
+        </div>
+        <div class="container hero-content">
+            <div class="open-source-badge" data-i18n="open_source_label">100% OPEN SOURCE</div>
+            <h1 class="animate">
+                <span data-i18n="hero_h1_1">Indestructible</span><br>
+                <span class="grad-text" data-i18n="hero_h1_2">Identity.</span>
+            </h1>
+            <p class="animate" data-i18n="hero_p" style="animation-delay: 0.2s;">
+                Forged in the fires of advanced cryptography. PassForge Pro is a zero-vulnerability vault environment
+                designed to withstand even the most aggressive state-level forensic analysis.
+
+            </p>
+            <div class="animate btn-container" style="animation-delay: 0.4s;">
+                <button onclick="openDownloadModal()" class="btn btn-primary" data-i18n="hero_btn_dl">Mount Vault
+                    14.3</button>
+                <a href="faq.html" class="btn btn-outline" data-i18n="nav_faq_long">SSS (Sıkça Sorulan Sorular)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Features Grid -->
+    <section class="container">
+        <div class="grid-3">
+            <div class="glass-card animate" style="animation-delay: 0.1s;">
+                <div style="font-size: 3rem; margin-bottom: 2rem;">🛡️</div>
+                <h3 class="grad-text" style="font-size: 1.8rem;" data-i18n="feat_lock_h">Autonomous Lockdown</h3>
+                <p style="margin-top: 1.5rem; color: var(--text-dim);" data-i18n="feat_lock_p">Passive monitoring loop
+                    detected. Vault purges memory instantly upon inactivity. No forensic footprints.</p>
+            </div>
+            <div class="glass-card animate" style="animation-delay: 0.2s;">
+                <div style="font-size: 3rem; margin-bottom: 2rem;">⚡</div>
+                <h3 class="grad-text" style="font-size: 1.8rem;" data-i18n="feat_wipe_h">Noisy Sector Wipe</h3>
+                <p style="margin-top: 1.5rem; color: var(--text-dim);" data-i18n="feat_wipe_p">Recursive overwrite with
+                    high-entropy urandom noise. Data reconstruction becomes mathematically impossible.</p>
+            </div>
+            <div class="glass-card animate" style="animation-delay: 0.3s;">
+                <div style="font-size: 3rem; margin-bottom: 2rem;">👣</div>
+                <h3 class="grad-text" style="font-size: 1.8rem;" data-i18n="feat_stealth_h">Ghost Binaries</h3>
+                <p style="margin-top: 1.5rem; color: var(--text-dim);" data-i18n="feat_stealth_p">Signature masking via
+                    polymorphic chaff generation in System32. Near-zero detection rate.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Tech Split 1: Vault Interface -->
+    <section class="container">
+        <div class="grid-2" style="align-items: center;">
+            <div class="scanner-box animate">
+                <img src="images/vault.png" style="width: 100%; border-radius: 40px;" alt="Vault System">
+            </div>
+            <div class="animate" style="animation-delay: 0.2s;">
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;" data-i18n="usage_nav_h">Dynamic Vault Navigation
+                </h2>
+                <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem; line-height: 1.8;"
+                    data-i18n="usage_nav_p">Our relational mapping allows for sub-atomic folder control and
+                    zero-footprint categorization. Manage thousands of entries with enterprise-grade latency.</p>
+                <a href="usage.html" class="btn btn-outline" data-i18n="hero_btn_tour">Audit The Protocol</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Tech Split 2: Security Deep Dive -->
+    <section class="container">
+        <div class="grid-2" style="align-items: center;">
+            <div class="glass-card zero-exploit-card animate">
+                <div class="ai-badge" data-i18n="ai_verified_label">PROPERTIES: AI-VERIFIED LOGIC</div>
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;" data-i18n="sec_h1">Zero-Exploit Architecture</h2>
+                <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem; line-height: 1.8;"
+                    data-i18n="sec_p">Our code base is hardened against memory injection, brute-force, and side-channel
+                    leakage. PassForge is not just a password manager; it's a cryptographic shield.</p>
+                <div style="display: flex; gap: 4rem;">
+                    <div>
+                        <h4 style="color: var(--accent); font-size: 1.5rem;">AES-256</h4>
+                        <p
+                            style="color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">
+                            Substrate</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); font-size: 1.5rem;">PBKDF2</h4>
+                        <p
+                            style="color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px;">
+                            Hardening</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scanner-box animate" style="animation-delay: 0.2s;">
+                <img src="images/security.png" style="width: 100%; border-radius: 40px;" alt="Security Shield">
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Tech Split 3: Advanced Source -->
+    <section class="container">
+        <div class="grid-2" style="align-items: center;">
+            <div class="scanner-box animate">
+                <img src="images/code.png" style="width: 100%; border-radius: 40px; opacity: 0.8;"
+                    alt="Source Integrity">
+            </div>
+            <div class="animate" style="animation-delay: 0.2s;">
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;" data-i18n="dev_h1">System Internals</h2>
+                <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem; line-height: 1.8;"
+                    data-i18n="dev_p">Technical documentation for developers and security auditors. Learn how we bypass
+                    UAC stealthily and maintain a persistent encrypted state without a local server.</p>
+                <a href="developer.html" class="btn btn-outline" data-i18n="hero_btn_tour">Audit The Protocol</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Strategy with Final Image -->
+    <section class="container" style="padding-bottom: 250px;">
+        <div class="grid-2" style="align-items: center;">
+            <div class="animate">
+                <h2 style="font-size: 3.5rem; margin-bottom: 2rem;" data-i18n="future_h1">Strategic Roadmap</h2>
+                <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem; line-height: 1.8;"
+                    data-i18n="future_p">The evolution of PassForge: Towards decentralized biometric security. We are
+                    building a future where your identity is bound to your biology, synchronized via air-gapped mesh
+                    networks.</p>
+                <a href="future.html" class="btn btn-primary" data-i18n="nav_future">Future</a>
+                <a href="contribute.html" class="btn btn-outline" data-i18n="nav_contribute">Contribute</a>
+            </div>
+            <div class="scanner-box animate" style="animation-delay: 0.2s;">
+                <img src="images/future.png" style="width: 100%; border-radius: 40px;" alt="Future Tech">
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Legal Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal-card">
+            <h2 class="grad-text" data-i18n="download_modal_h">Security & Legal Clearance Required</h2>
+            <p data-i18n-html="download_modal_p">By proceeding with the download of PassForge Pro, you acknowledge that
+                you
+                are assuming full responsibility for the deployment and management of this cryptographic vault...</p>
+
+            <label class="legal-check">
+                <input type="checkbox" id="legalAgree" onchange="toggleDownloadBtn()">
+                <span data-i18n="download_modal_confirm">I Accept & Proceed to Mount</span>
+            </label>
+
+            <div class="download-actions">
+                <button id="finalDownloadBtn" class="btn btn-primary" style="opacity: 0.4; pointer-events: none;"
+                    onclick="initiateSecureDownload()" data-i18n="hero_btn_dl">Mount Vault</button>
+                <button class="btn btn-outline" onclick="closeDownloadModal()" data-i18n="download_modal_cancel">Abort
+                    Operation</button>
+            </div>
+        </div>
+    </div>
+
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Download Modal Functions
+        function openDownloadModal() {
+            document.getElementById('downloadModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDownloadModal() {
+            document.getElementById('downloadModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleDownloadBtn() {
+            const isChecked = document.getElementById('legalAgree').checked;
+            const btn = document.getElementById('finalDownloadBtn');
+            if (isChecked) {
+                btn.style.opacity = '1';
+                btn.style.pointerEvents = 'auto';
+            } else {
+                btn.style.opacity = '0.4';
+                btn.style.pointerEvents = 'none';
+            }
+        }
+
+        function initiateSecureDownload() {
+            window.location.href = 'setup.html';
+        }
+
+        // Close on click outside
+        document.getElementById('downloadModal').addEventListener('click', (e) => {
+            if (e.target.id === 'downloadModal') closeDownloadModal();
+        });
+
+        // Page loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 600);
+        });
+    </script>
+</body>
+
+</html>
+
+
+

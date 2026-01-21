@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="padding-top: 120px;">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 4rem; text-align: center;">
+            <h1 style="font-size: 4rem; margin-bottom: 1.5rem;" data-i18n="dev_h1">System Internals & Tactical Logic
+            </h1>
+            <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 800px; margin: 0 auto;" data-i18n="dev_p">
+                Technical documentation for
+                developers and security auditors.</p>
+        </header>
+
+        <!-- 100% Trust Indicator -->
+        <section style="text-align: center; margin-bottom: 5rem;">
+            <div class="trust-indicator">
+                <div class="trust-circle"></div>
+                <div class="trust-inner">
+                    <div class="trust-percent">100%</div>
+                    <div class="trust-label" data-i18n="ai_verified_label">AI-VERIFIED</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="animate">
+            <div class="grid-2" style="align-items: start; margin-bottom: 4rem;">
+                <div class="glass-card">
+                    <h3 class="grad-text" style="font-size: 2rem; margin-bottom: 1.5rem;" data-i18n="dev_ghost_h">
+                        Ghost Protocol Mapping</h3>
+                    <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="dev_ghost_p">Logic: On startup,
+                        the application creates a shadow copy of its core binaries in high-visibility but ignored system
+                        paths. It then spawns a child process with truncated signatures. This polymorphic behavior
+                        prevents static antivirus analysis from pinning the main vault logic.</p>
+                </div>
+                <div class="glass-card">
+                    <h3 class="grad-text" style="font-size: 2rem; margin-bottom: 1.5rem;" data-i18n="dev_uac_h">
+                        Silent UAC Elevation</h3>
+                    <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="dev_uac_p">Mechanism: Bypassing
+                        the standard UAC prompt via a recursive ShellExecute call combined with a manifest injection.
+                        The application requests 'runas' privileges while simultaneously spawning a detached background
+                        process to suppress terminal flickering.</p>
+                </div>
+                <div class="glass-card">
+                    <h3 class="grad-text" style="font-size: 2rem; margin-bottom: 1.5rem;" data-i18n="dev_wipe_h">
+                        Multi-Round Noisy Wipe</h3>
+                    <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="dev_wipe_p">Algorithm: Secure
+                        Erasure. We don't just delete. We loop through the file sector 3-7 times, writing high-entropy
+                        urandom data. This overwrites the magnetic/flash residue on the storage medium, defeating
+                        state-level data recovery tools.</p>
+                </div>
+                <div class="scanner-box" style="margin-top: 2rem;">
+                    <img src="images/code.png" alt="Development Logic"
+                        style="width: 100%; height: auto; object-fit: contain; max-height: 400px;">
+                </div>
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="security.html" class="btn btn-outline" data-i18n="nav_security">Explore Security
+                        Architecture</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with More Links -->
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Page loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 600);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation & FAQ | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .doc-section {
+            margin-bottom: 8rem;
+        }
+
+        .doc-nav {
+            position: sticky;
+            top: 140px;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .doc-nav a {
+            display: block;
+            color: var(--text-dim);
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 10px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .doc-nav a:hover,
+        .doc-nav a.active {
+            background: var(--accent);
+            color: var(--bg-dark);
+            transform: translateX(5px);
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .code-block {
+            position: relative;
+            background: #000;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            font-family: 'Courier New', monospace;
+            color: var(--accent);
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .warning-box {
+            background: rgba(255, 149, 0, 0.1);
+            border-left: 4px solid #FF9500;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .report-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .vector-badge {
+            display: inline-block;
+            background: rgba(0, 245, 255, 0.1);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(5px);
+        }
+
+        .vector-badge:hover {
+            background: var(--accent);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body style="padding-top: 120px;">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 4rem; text-align: center;">
+            <h1 style="font-size: 4rem; margin-bottom: 1.5rem;" data-i18n="faq_h1">Documentation & SSS</h1>
+            <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 2rem;" data-i18n="faq_subtitle">Complete
+                guide for PassForge
+                Pro security architecture</p>
+            <a href="usage.html" class="vector-badge"
+                style="text-decoration: none; border-color: var(--accent); color: white; background: rgba(0, 245, 255, 0.2); padding: 0.8rem 2rem; font-size: 1rem;"
+                data-i18n="preview_gallery_h">Visual Interface Gallery</a>
+        </header>
+
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 4rem; align-items: start;">
+            <!-- Documentation Navigation -->
+            <div class="doc-nav">
+                <h4 style="color: var(--accent); margin-bottom: 1.5rem; font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="quick_nav_h">QUICK NAVIGATION</h4>
+                <a href="#getting-started" data-i18n="guide_title">Getting Started</a>
+                <a href="#security-architecture" data-i18n="sec_arch_title">Security Architecture</a>
+                <a href="#security-report" data-i18n="security_report_title">Security Report</a>
+                <a href="#best-practices" data-i18n="best_practices_title">Best Practices</a>
+                <a href="#scenarios" data-i18n="scenarios_title">Usage Scenarios</a>
+                <a href="#opsec-privacy" data-i18n="opsec_title">OPSEC & Privacy</a>
+                <a href="#faq" data-i18n="ask">Frequently Asked Questions</a>
+            </div>
+
+            <!-- Main Documentation Content -->
+            <div>
+                <!-- Getting Started Guide -->
+                <section id="getting-started" class="doc-section animate">
+                    <h2 class="grad-text" style="font-size: 3rem; margin-bottom: 1rem;" data-i18n="guide_title">Getting
+                        Started with PassForge Pro</h2>
+                    <p style="color: var(--text-dim); font-size: 1.1rem; margin-bottom: 3rem;"
+                        data-i18n="guide_subtitle">Complete setup and usage guide for PassForgePro.py</p>
+
+                    <div class="step-card">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="guide_step1_h">Step 1:
+                            Installation</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 1rem;"
+                            data-i18n="guide_step1_p">Clone the repository and install dependencies:</p>
+                        <div class="code-block">
+                            <div class="copy-badge" data-i18n="copy_label"
+                                onclick="copyText('git clone https://github.com/can-deliktas/PassforgeV2.git && cd PassforgeV2 && pip install -r requirements.txt', this)">
+                                COPY</div>
+                            git clone https://github.com/can-deliktas/PassforgeV2.git<br>cd
+                            PassforgeV2<br>pip install -r requirements.txt
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="guide_step2_h">Step 2: First
+                            Launch</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 1rem;"
+                            data-i18n="guide_step2_p">Run 'python PassForgePro.py' to initialize...</p>
+                        <div class="code-block">
+                            <div class="copy-badge" data-i18n="copy_label"
+                                onclick="copyText('python PassForgePro.py', this)">COPY</div>
+                            python PassForgePro.py
+                        </div>
+                        <div class="warning-box">
+                            <p style="color: #FF9500; font-weight: 700;" data-i18n="guide_step2_sec_critical">⚠️
+                                CRITICAL: Your master password is
+                                IRRETRIEVABLE if lost. Store it securely using physical methods (safe, paper backup,
+                                hardware key).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="guide_step3_h">Step 3: Vault
+                            Creation</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="guide_step3_p">Select vault
+                            folder location, choose language (EN/TR), and select theme...</p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="guide_step4_h">Step 4: Adding
+                            Entries</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="guide_step4_p">Use the 'Add
+                            Entry' button to create password records...</p>
+                    </div>
+
+                    <div class="step-card">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="guide_step5_h">Step 5:
+                            Auto-Lock & Security</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="guide_step5_p">Configure
+                            auto-lock timer in settings...</p>
+                    </div>
+                </section>
+
+                <!-- Advanced Security Architecture -->
+                <section id="security-architecture" class="doc-section animate">
+                    <div class="report-badge">DEEP DIVE</div>
+                    <h2 class="grad-text" style="font-size: 2.5rem; margin-bottom: 2rem;" data-i18n="sec_arch_title">
+                    </h2>
+
+                    <!-- Part I -->
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="sec_design_philosophy_h"></h3>
+                        <p style="color: var(--text-dim); margin-bottom: 2rem; border-left: 2px solid var(--accent); padding-left: 1rem;"
+                            data-i18n="sec_design_philosophy_p"></p>
+
+                        <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="sec_layer_title"></h3>
+
+                        <div style="display: grid; gap: 1.5rem;">
+                            <div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_layer_2_1_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;" data-i18n="sec_layer_2_1_p"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_layer_2_2_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;" data-i18n="sec_layer_2_2_p"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_layer_2_3_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;" data-i18n="sec_layer_2_3_p"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_layer_2_4_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;" data-i18n="sec_layer_2_4_p"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_layer_2_5_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;" data-i18n="sec_layer_2_5_p"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_layer_2_6_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;" data-i18n="sec_layer_2_6_p"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_layer_2_7_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;" data-i18n="sec_layer_2_7_p"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Part II: Zero Knowledge -->
+                    <div class="glass-card" style="margin-bottom: 2rem; border-top: 4px solid #34C759;">
+                        <h2 style="color: white; margin-bottom: 1.5rem;" data-i18n="sec_zk_title"></h2>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h3 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="sec_zk_def_h"></h3>
+                            <p style="color: var(--text-dim);" data-i18n="sec_zk_def_p"></p>
+                        </div>
+
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="sec_zk_cycle_h"></h3>
+                        <div
+                            style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                            <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_zk_cycle_1_h"></h4>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;"
+                                data-i18n="sec_zk_cycle_1_p"></p>
+
+                            <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_zk_cycle_2_h"></h4>
+                            <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;"
+                                data-i18n="sec_zk_cycle_2_p"></p>
+
+                            <h4 style="color: #fff; margin-bottom: 0.5rem;" data-i18n="sec_zk_cycle_3_h"></h4>
+                            <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="sec_zk_cycle_3_p"></p>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div style="background: rgba(52, 199, 89, 0.1); padding: 1rem; border-radius: 10px;">
+                                <h4 style="color: #34C759; margin-bottom: 0.5rem;" data-i18n="sec_zk_guarantee_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_zk_guarantee_p">
+                                </p>
+                            </div>
+                            <div style="background: rgba(52, 199, 89, 0.1); padding: 1rem; border-radius: 10px;">
+                                <h4 style="color: #34C759; margin-bottom: 0.5rem;" data-i18n="sec_zk_backup_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_zk_backup_p"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Part III: Threat Model -->
+                    <div class="glass-card" style="margin-bottom: 2rem; border-top: 4px solid #FF453A;">
+                        <h2 style="color: white; margin-bottom: 1.5rem;" data-i18n="sec_tm_title"></h2>
+
+                        <div style="display: grid; gap: 1.5rem;">
+                            <div>
+                                <h3 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="sec_tm_assets_h">
+                                </h3>
+                                <p style="color: var(--text-dim);" data-i18n="sec_tm_assets_list"></p>
+                            </div>
+
+                            <div>
+                                <h3 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="sec_tm_actors_h">
+                                </h3>
+                                <ul style="color: var(--text-dim); padding-left: 1.2rem; line-height: 1.6;">
+                                    <li data-i18n="sec_tm_actors_1"></li>
+                                    <li data-i18n="sec_tm_actors_2"></li>
+                                    <li data-i18n="sec_tm_actors_3"></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="sec_tm_vectors_h">
+                                </h3>
+                                <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1rem;">
+                                    <span class="vector-badge" data-i18n="sec_tm_vec_1"></span>
+                                    <span class="vector-badge" data-i18n="sec_tm_vec_2"></span>
+                                    <span class="vector-badge" data-i18n="sec_tm_vec_3"></span>
+                                    <span class="vector-badge" data-i18n="sec_tm_vec_4"></span>
+                                    <span class="vector-badge" data-i18n="sec_tm_vec_5"></span>
+                                </div>
+                            </div>
+
+                            <div style="background: rgba(255, 69, 58, 0.1); padding: 1rem; border-radius: 10px;">
+                                <h3 style="color: #FF453A; margin-bottom: 0.5rem;" data-i18n="sec_tm_scope_h"></h3>
+                                <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="sec_tm_scope_p"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Part IV: Pentest Checklist -->
+                    <div class="glass-card" style="border-top: 4px solid #BF5AF2;">
+                        <h2 style="color: white; margin-bottom: 1.5rem;" data-i18n="sec_pt_title"></h2>
+
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                            <div>
+                                <h4 style="color: #BF5AF2; margin-bottom: 0.5rem;" data-i18n="sec_pt_crypto_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_pt_crypto_list">
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="color: #BF5AF2; margin-bottom: 0.5rem;" data-i18n="sec_pt_mem_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_pt_mem_list"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #BF5AF2; margin-bottom: 0.5rem;" data-i18n="sec_pt_disk_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_pt_disk_list"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #BF5AF2; margin-bottom: 0.5rem;" data-i18n="sec_pt_clip_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_pt_clip_list"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #BF5AF2; margin-bottom: 0.5rem;" data-i18n="sec_pt_auth_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_pt_auth_list"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #BF5AF2; margin-bottom: 0.5rem;" data-i18n="sec_pt_bin_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_pt_bin_list"></p>
+                            </div>
+                            <div>
+                                <h4 style="color: #BF5AF2; margin-bottom: 0.5rem;" data-i18n="sec_pt_ux_h"></h4>
+                                <p style="color: var(--text-dim); font-size: 0.85rem;" data-i18n="sec_pt_ux_list"></p>
+                            </div>
+                        </div>
+
+                        <div
+                            style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                            <p style="color: #BF5AF2; font-weight: bold; letter-spacing: 1px; font-size: 0.9rem;"
+                                data-i18n="sec_pt_final"></p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Security Report -->
+                <section id="security-report" class="doc-section animate">
+                    <div class="report-badge">TECHNICAL ANALYSIS</div>
+                    <h2 class="grad-text" style="font-size: 3rem; margin-bottom: 1rem;"
+                        data-i18n="security_report_title">Technical Security Report</h2>
+                    <p style="color: var(--text-dim); font-size: 1.1rem; margin-bottom: 3rem;"
+                        data-i18n="security_report_subtitle">Independent analysis of PassForge Pro cryptographic
+                        implementation</p>
+
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="report_exec_summary">Executive
+                            Summary</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="report_exec_p">PassForge Pro
+                            implements industry-standard cryptographic primitives...</p>
+                    </div>
+
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="report_crypto_h">Cryptographic
+                            Stack</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="report_crypto_p">Key Derivation:
+                            PBKDF2-HMAC-SHA256 with 150,000 iterations...</p>
+                    </div>
+
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="report_threat_h">Threat Model
+                        </h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="report_threat_p">DEFENDS
+                            AGAINST: Offline brute-force attacks...</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="report_audit_h">Security Audit
+                            Status</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="report_audit_p">PassForge Pro is
+                            100% open-source...</p>
+                    </div>
+                </section>
+
+                <!-- Best Practices -->
+                <section id="best-practices" class="doc-section animate">
+                    <h2 class="grad-text" style="font-size: 3rem; margin-bottom: 1rem;"
+                        data-i18n="best_practices_title">Security Best Practices</h2>
+                    <p style="color: var(--text-dim); font-size: 1.1rem; margin-bottom: 3rem;"
+                        data-i18n="best_practices_subtitle">Recommendations for maximum security</p>
+
+                    <div class="glass-card" style="margin-bottom: 2rem; border-left: 4px solid #FF9500;">
+                        <h3 style="color: #FF9500; margin-bottom: 1rem;" data-i18n="bp_password_h">Master Password
+                            Storage</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="bp_password_p">NEVER store your
+                            master password digitally...</p>
+                    </div>
+
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="bp_backup_h">Vault Backup
+                            Strategy</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="bp_backup_p">Maintain 3-2-1
+                            backup rule...</p>
+                    </div>
+
+                    <div class="glass-card" style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="bp_updates_h">Software Updates
+                        </h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="bp_updates_p">Always use the
+                            latest version from official GitHub repository...</p>
+                    </div>
+
+                    <div class="glass-card">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="bp_environment_h">Operating
+                            Environment</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="bp_environment_p">IDEAL: Tails
+                            OS (live USB, RAM-only)...</p>
+                    </div>
+                </section>
+
+                <!-- Usage Scenarios -->
+                <section id="scenarios" class="doc-section animate">
+                    <h2 class="grad-text" style="font-size: 3rem; margin-bottom: 1rem;" data-i18n="scenarios_title">
+                        Usage Scenarios</h2>
+                    <p style="color: var(--text-dim); font-size: 1.1rem; margin-bottom: 3rem;"
+                        data-i18n="scenarios_subtitle">Recommended configurations for different user levels</p>
+
+                    <div class="glass-card"
+                        style="margin-bottom: 2rem; background: rgba(52, 199, 89, 0.05); border-left: 4px solid #34C759;">
+                        <h3 style="color: #34C759; margin-bottom: 1rem;" data-i18n="scenario_beginner_h">Beginner: Basic
+                            Protection</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="scenario_beginner_p">Setup:
+                            Install on personal Windows/Mac...</p>
+                    </div>
+
+                    <div class="glass-card"
+                        style="margin-bottom: 2rem; background: rgba(0, 245, 255, 0.05); border-left: 4px solid var(--accent);">
+                        <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="scenario_intermediate_h">
+                            Intermediate: Enhanced Security</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="scenario_intermediate_p">Setup:
+                            Linux with full-disk encryption...</p>
+                    </div>
+
+                    <div class="glass-card"
+                        style="background: rgba(255, 69, 58, 0.05); border-left: 4px solid #FF453A;">
+                        <h3 style="color: #FF453A; margin-bottom: 1rem;" data-i18n="scenario_advanced_h">Advanced:
+                            Maximum Paranoia</h3>
+                        <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="scenario_advanced_p">Setup:
+                            Tails OS (live USB), air-gapped device...</p>
+                    </div>
+                </section>
+
+                </section>
+
+                <!-- OPSEC & Privacy -->
+                <section id="opsec-privacy" class="doc-section animate">
+                    <div class="report-badge">OPERATIONAL SECURITY</div>
+                    <h2 class="grad-text" style="font-size: 3rem; margin-bottom: 2rem;" data-i18n="opsec_title"></h2>
+
+                    <div class="glass-card" style="margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="opsec_q1"></h3>
+                        <p style="color: var(--text-dim);" data-i18n="opsec_a1"></p>
+                    </div>
+                    <div class="glass-card" style="margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="opsec_q2"></h3>
+                        <p style="color: var(--text-dim);" data-i18n="opsec_a2"></p>
+                    </div>
+                    <div class="glass-card">
+                        <h3 style="color: var(--accent); margin-bottom: 0.5rem;" data-i18n="opsec_q3"></h3>
+                        <p style="color: var(--text-dim);" data-i18n="opsec_a3"></p>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section id="faq" class="doc-section">
+                    <h2 class="grad-text" style="font-size: 3rem; margin-bottom: 1rem;" data-i18n="ask">Frequently Asked
+                        Questions</h2>
+
+                    <!-- Threat Model Notice -->
+                    <div class="glass-card"
+                        style="margin-bottom: 4rem; border-left: 4px solid #FF9500; background: rgba(255, 149, 0, 0.05);">
+                        <p style="color: #FF9500; font-weight: 700; line-height: 1.8; font-size: 1rem;"
+                            data-i18n="faq_threat_notice">
+                            ⚠️ THREAT MODEL NOTICE: PassForge provides mid-level protection in its threat model...
+                        </p>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q1">How does Clipboard
+                                Sanitation work?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a1">PassForge monitors
+                                the system clipboard state...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q2">What is
+                                No-Interaction Auto-Lock?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a2">Our 'Unmanned
+                                Defense' protocol tracks user interaction...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q3">How secure is the
+                                Master Password?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a3">We use PBKDF2 with
+                                HMAC-SHA256...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q4">Does PassForge
+                                resist CPU backdoors?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a4">PassForge is
+                                hardware-agnostic but memory-sensitive...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q5">What if the entire
+                                system is hacked?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a5">Even in a total OS
+                                compromise, your vault remains encrypted...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q6">Can malware steal
+                                data after lock?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a6">No. Upon locking,
+                                the application executes a 'Memory Shred' command...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q7">Can the master
+                                password be captured from RAM?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a7">Theoretically yes,
+                                but it requires...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q8">What about memory
+                                dump + string scan?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a8">The Fernet key is
+                                never stored on disk...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q9">Does PyArmor
+                                anti-debug really work?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a9">PyArmor stops casual
+                                debuggers and script kiddies...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q10">What if the
+                                algorithm is discovered?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a10">Modern cryptography
+                                does NOT rely on algorithm secrecy...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q11">Would running on
+                                Tails increase security?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a11">Yes, significantly.
+                                Tails is a RAM-only OS...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q12">Can someone
+                                brute-force my master password?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a12">Extremely unlikely.
+                                We use PBKDF2-HMAC-SHA256...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q13">What happens if I
+                                forget my master password?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a13">Your vault is
+                                permanently inaccessible...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q14">Is the SQLite
+                                database file encrypted?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a14">Yes, but with a
+                                critical distinction...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q15">Can PassForge
+                                protect against keyloggers?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a15">No password manager
+                                can fully protect...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q16">What if my vault
+                                file is stolen?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a16">The attacker has an
+                                encrypted blob...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q17">Does PassForge
+                                have a cloud sync feature?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a17">No, and this is
+                                intentional...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q18">Can I audit the
+                                source code myself?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a18">Absolutely.
+                                PassForge is 100% open-source...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q19">What about
+                                side-channel attacks?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a19">PassForge uses
+                                constant-time comparison...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q20">Is PassForge
+                                vulnerable to SQL injection?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a20">No. All database
+                                queries use parameterized statements...</p>
+                        </div>
+                        <div class="glass-card" style="margin-bottom: 2rem; border-left: 2px solid var(--accent);">
+                            <h3 style="color: var(--accent); margin-bottom: 1rem;" data-i18n="faq_q21">Can I use
+                                PassForge on a shared/public computer?</h3>
+                            <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="faq_a21">Not recommended.
+                                Shared computers may have keyloggers...</p>
+                        </div>
+                        <div class="scanner-box">
+                            <img src="images/security.png" alt="Intelligence System"
+                                style="width: 100%; height: auto; object-fit: contain; max-height: 500px;">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Page loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 600);
+        });
+
+        function copyText(text, btn) {
+            navigator.clipboard.writeText(text);
+            const originalText = btn.innerText;
+            const lang = document.documentElement.lang || 'en';
+            btn.innerText = (translations[lang] && translations[lang].copied_feedback) ? translations[lang].copied_feedback : 'COPIED!';
+            btn.style.background = '#34C759';
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = 'var(--accent)';
+            }, 2000);
+        }
+
+        // Smooth scroll for doc navigation
+        document.querySelectorAll('.doc-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Update active state
+                    document.querySelectorAll('.doc-nav a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="padding-top: 150px;">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 8rem; text-align: center;">
+            <h1 style="font-size: 5rem; margin-bottom: 1.5rem;" data-i18n="sec_h1">Zero-Exploit Architecture</h1>
+            <p style="font-size: 1.3rem; color: var(--text-dim);" data-i18n="sec_p">Our code base is hardened against
+                memory injection, brute-force, and side-channel leakage.</p>
+        </header>
+
+        <!-- Merged Source Content -->
+        <section class="grid-2" style="align-items: center; margin-bottom: 10rem;">
+            <div class="animate">
+                <div class="glass-card zero-exploit-card" style="margin-bottom: 4rem;">
+                    <div class="ai-badge" data-i18n="ai_verified_label">PROPERTIES: AI-VERIFIED LOGIC</div>
+                    <h2 class="grad-text" style="font-size: 2.5rem; margin-bottom: 1.5rem;" data-i18n="src_h1">Source
+                        Integrity Protocol</h2>
+                    <h3 class="grad-text" style="font-size: 1.8rem; margin-bottom: 1rem;" data-i18n="src_box1_h">
+                        Cryptographic Substrate</h3>
+                    <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="src_box1_p">The core uses
+                        cryptography.fernet for symmetrical encryption...</p>
+                </div>
+                <div class="glass-card" style="border-right: 4px solid var(--accent);">
+                    <h3 class="grad-text" style="font-size: 1.8rem; margin-bottom: 1rem;" data-i18n="src_box2_h">
+                        Recursive Clean-up</h3>
+                    <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="src_box2_p">Logic: On deletion, the
+                        sector is not just marked as free...</p>
+                </div>
+            </div>
+            <div class="scanner-box animate">
+                <img src="images/code.png" style="width: 100%; border-radius: 40px;" alt="Code Architecture">
+            </div>
+        </section>
+
+        <section class="grid-2" style="margin-bottom: 8rem; align-items: start;">
+            <div class="glass-card">
+                <h2 class="grad-text" style="font-size: 2.5rem; margin-bottom: 2rem;" data-i18n="sec_entropy_h">
+                    Bit-Entropy Analysis</h2>
+                <p style="font-size: 1.15rem; color: var(--text-dim); line-height: 1.8; margin-bottom: 3rem;"
+                    data-i18n="sec_entropy_p">Every secret is evaluated through logarithmic complexity tests before
+                    storage. We utilize Shannon Entropy calculations to ensure your master key is mathematically
+                    superior to common patterns.</p>
+                <div
+                    style="background: rgba(0,0,0,0.5); padding: 2.5rem; border-radius: 30px; border: 1px solid var(--glass-border);">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <span style="color: var(--accent); font-weight: 900; letter-spacing: 2px;">ENTROPY CORE</span>
+                        <span style="color: #34C759; font-weight: 800;">ACTIVE</span>
+                    </div>
+                    <div style="width: 100%; height: 12px; background: #111; border-radius: 10px; overflow: hidden;">
+                        <div
+                            style="width: 92%; height: 100%; background: var(--grad); box-shadow: 0 0 20px var(--accent);">
+                        </div>
+                    </div>
+                    <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 15px;">Target: > 80 bits (Log2
+                        Complexity)</p>
+                </div>
+            </div>
+            <div class="glass-card">
+                <h2 class="grad-text" style="font-size: 2.5rem; margin-bottom: 2rem;" data-i18n="sec_wipe_h">Noisy Wipe
+                    Logic</h2>
+                <p style="font-size: 1.15rem; color: var(--text-dim); line-height: 1.8; margin-bottom: 3rem;"
+                    data-i18n="sec_wipe_p">Instead of simple unlinking, PassForge overwrites file sectors with
+                    high-entropy urandom noise to defeat forensic retrieval. This recursive process ensures that
+                    magnetic or flash residue is neutralized.</p>
+                <img src="images/security.png"
+                    style="width: 100%; border-radius: 20px; opacity: 0.6; mix-blend-mode: overlay;"
+                    alt="Forensic Shield">
+            </div>
+        </section>
+
+        <section class="glass-card" style="margin-bottom: 10rem; text-align: center;">
+            <h2 style="font-size: 3.5rem; margin-bottom: 4rem;" data-i18n="sec_specs_h">Technical Blueprint</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+                <div class="glass-card" style="padding: 2.5rem; background: rgba(0,245,255,0.02);">
+                    <h3 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;" data-i18n="sec_specs_aes">
+                        AES-256 GCM / Fernet</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="sec_authenticated_aes">
+                        Authenticated Encryption substrate providing
+                        confidentially and integrity.</p>
+                </div>
+                <div class="glass-card" style="padding: 2.5rem; background: rgba(0,245,255,0.02);">
+                    <h3 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;" data-i18n="sec_specs_kdf">
+                        PBKDF2-HMAC-SHA256 (150k Rounds)</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="sec_adaptive_kdf">Adaptive key
+                        hardening to prevent
+                        GPU-accelerated brute force attacks.</p>
+                </div>
+                <div class="glass-card" style="padding: 2.5rem; background: rgba(0,245,255,0.02);">
+                    <h3 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;"
+                        data-i18n="sec_specs_hash">BCrypt Salt-Stretch</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;" data-i18n="sec_specs_memory">Memory-hard
+                        hashing for persistent
+                        authentication layers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 600);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Manifesto | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="padding-top: 120px;">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 6rem; text-align: center;">
+            <div class="open-source-badge" data-i18n="open_source_label">100% Open Source</div>
+            <h1 style="font-size: 4rem; margin-bottom: 1.5rem;" data-i18n="manifesto_h1">Open Source Manifesto</h1>
+            <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 800px; margin: 0 auto;"
+                data-i18n="manifesto_p">
+                Complete transparency. Every line of PassForge Pro is open for audit. Below is a block-by-block
+                breakdown of the core architecture.
+            </p>
+            <div style="margin-top: 3rem;">
+                <a href="developer.html" class="btn btn-outline" data-i18n="nav_developer">Technical Deep Dive</a>
+            </div>
+        </header>
+
+        <!-- Code Block 1: Theme Engine -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">🎨</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_theme_h">Theme Engine (Lines 22-32)</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_theme_p">
+                The THEMES dictionary defines 7 distinct color palettes (Midnight, Forest, Crimson, Ocean, Cyberpunk,
+                Nebula, Ghost). Each theme contains accent colors, hover states, and background configurations. This
+                allows users to personalize the vault interface while maintaining cryptographic integrity.
+            </p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+THEMES = {
+    "Midnight": {"accent": "#5D3FD3", "hover": "#4832A8", "bg_dark": "#0D0D0D"},
+    "Forest": {"accent": "#2D6A4F", "hover": "#1B4332", "bg_dark": "#081C15"},
+    "Crimson": {"accent": "#A4161A", "hover": "#660708", "bg_dark": "#0B090A"},
+    # ... 4 more themes
+}</pre>
+        </section>
+
+        <!-- Code Block 2: Localization -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">🌍</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_l10n_h">Localization System (Lines
+                    36-158)</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_l10n_p">
+                The L10N class provides full Turkish/English bilingual support. All UI strings are centralized in a
+                STRINGS dictionary, allowing runtime language switching without application restart. This architecture
+                ensures zero hardcoded text in the UI layer.
+            </p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+class L10N:
+    STRINGS = {
+        "en": {"title": "PassForge Pro V9", "unlock": "UNLOCK ACCESS", ...},
+        "tr": {"title": "PassForge Pro V9", "unlock": "ERİŞİMİ AÇ", ...}
+    }</pre>
+        </section>
+
+        <!-- Code Block 3: AuthManager -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">🔐</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_auth_h">AuthManager (Lines 185-208)</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_auth_p">
+                The authentication core uses PBKDF2-HMAC-SHA256 with 150,000 iterations to derive encryption keys.
+                Password verification uses bcrypt with 12 rounds of salt stretching. This dual-layer approach ensures
+                that even leaked hashes are computationally infeasible to crack.
+            </p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+@staticmethod
+def derive_key(password: str, salt: bytes) -> bytes:
+    kdf = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=salt, iterations=150000)
+    return base64.urlsafe_b64encode(kdf.derive(password.encode()))</pre>
+        </section>
+
+        <!-- Code Block 4: VaultDB -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">🗄️</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_vault_h">VaultDB (Lines 240-268)</h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_vault_p">
+                The encrypted database layer combines SQLite with Fernet symmetric encryption. The Fernet key is derived
+                from the master password and never stored on disk. Each password entry is individually encrypted,
+                providing granular access control even within the same vault.
+            </p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+class VaultDB:
+    def __init__(self, key: bytes, folder_path: str):
+        self.fernet = Fernet(key)
+        self.db_path = os.path.join(folder_path, "vault.db")
+        # SQLite schema with encrypted_pass BLOB column</pre>
+        </section>
+
+        <!-- Code Block 5: StealthSystem -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">👻</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_stealth_h">StealthSystem (Lines 270-308)
+                </h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_stealth_p">
+                The Ghost Protocol generates decoy files in system directories to mask the application signature. Silent
+                UAC elevation uses recursive ShellExecute calls with hidden console windows. Secure delete overwrites
+                file contents with random data before unlinking.
+            </p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+@staticmethod
+def ghost_protocol():
+    paths = [os.environ.get('TEMP'), os.path.join(os.environ.get('SystemRoot'), 'Prefetch')]
+    for p in paths:
+        for _ in range(8):
+            f = os.path.join(p, f"sys_cache_{random.randint(100, 999)}.tmp")
+            with open(f, "wb") as dummy: dummy.write(os.urandom(random.randint(1024, 8192)))</pre>
+        </section>
+
+        <!-- Code Block 6: Entropy Engine -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">🎲</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_gen_h"></h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_gen_p"></p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+def generate_password(length=32):
+    alphabet = string.ascii_letters + string.digits + "!@#$%^&*"
+    while True:
+        password = ''.join(secrets.choice(alphabet) for _ in range(length))
+        if (any(c.islower() for c in password)
+                and any(c.isupper() for c in password)
+                and sum(c.isdigit() for c in password) >= 3):
+            return password</pre>
+        </section>
+
+        <!-- Code Block 7: Clipboard Sentinel -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">✂️</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_clip_h"></h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_clip_p"></p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+def clear_clipboard_thread():
+    time.sleep(45)
+    try:
+        pyperclip.copy("")  # Overwrite with empty string
+    except Exception:
+        pass  # Handle race conditions gracefully</pre>
+        </section>
+
+        <!-- Code Block 8: Restoration Logic -->
+        <section class="glass-card animate" style="margin-bottom: 4rem;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">♻️</span>
+                <h2 class="grad-text" style="font-size: 2rem;" data-i18n="code_restore_h"></h2>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;" data-i18n="code_restore_p"></p>
+            <pre
+                style="background: #0a0a0a; padding: 2rem; border-radius: 15px; overflow-x: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--accent); border: 1px solid var(--glass-border);">
+def restore_entry(self, entry_id):
+    # Atomic transaction to move entry back from trash
+    cursor.execute("INSERT INTO passwords SELECT ... FROM trash WHERE id=?", (entry_id,))
+    cursor.execute("DELETE FROM trash WHERE id=?", (entry_id,))
+    self.conn.commit()</pre>
+        </section>
+
+        <!-- System Limitations -->
+        <section class="glass-card animate" style="margin-bottom: 4rem; border-left: 3px solid #FF9500;">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 2rem;">
+                <span style="font-size: 2rem;">⚠️</span>
+                <h2 style="font-size: 2rem; color: #FF9500;" data-i18n="limitations_h">Known Limitations</h2>
+            </div>
+            <ul style="color: var(--text-dim); line-height: 2; padding-left: 2rem;">
+                <li data-i18n="limit_1">Windows-only: Requires Windows 10/11 with Python 3.8+</li>
+                <li data-i18n="limit_2">No cloud sync: Data remains strictly local (intentional security choice)</li>
+                <li data-i18n="limit_3">Manual backup required: Automatic cloud backup not available</li>
+                <li data-i18n="limit_4">Single-user vault: No multi-user access control in current version</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer with More Links -->
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Page loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 800);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

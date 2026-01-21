@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="legal_title">Privacy & Security Policy | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .policy-section {
+            margin-bottom: 4rem;
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s;
+        }
+
+        .policy-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .policy-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .policy-card p {
+            color: var(--text-dim);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .hero-legal {
+            text-align: center;
+            padding: 6rem 0 4rem;
+        }
+
+        .warning-box {
+            background: rgba(255, 87, 87, 0.1);
+            border: 1px solid #ff5757;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+
+        .warning-box h4 {
+            color: #ff5757;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legal-faq {
+            margin-top: 6rem;
+        }
+
+        .legal-faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .legal-faq-q {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .legal-faq-a {
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="page-background body-bg"></div>
+    <div class="body-bg-overlay"></div>
+
+    <main class="container" style="padding-top: 100px;">
+        <header class="hero-legal animate">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;" data-i18n="legal_h1">Legal & Security Clearance</h1>
+            <p style="font-size: 1.2rem; color: var(--text-dim); max-width: 800px; margin: 0 auto;" data-i18n="legal_p">
+                Our commitment to zero-knowledge privacy and state-level security.</p>
+        </header>
+
+        <!-- Privacy Policy Section -->
+        <section class="policy-section animate">
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); padding-left: 1.5rem;"
+                data-i18n="privacy_title">Privacy Policy</h2>
+            <p style="color: var(--text-dim); margin-bottom: 2rem;" data-i18n="privacy_intro"></p>
+
+            <div class="policy-grid">
+                <div class="policy-card">
+                    <h3 data-i18n="privacy_feat1_h"></h3>
+                    <p data-i18n="privacy_feat1_p"></p>
+                </div>
+                <div class="policy-card">
+                    <h3 data-i18n="privacy_feat2_h"></h3>
+                    <p data-i18n="privacy_feat2_p"></p>
+                </div>
+                <div class="policy-card">
+                    <h3 data-i18n="privacy_feat3_h"></h3>
+                    <p data-i18n="privacy_feat3_p"></p>
+                </div>
+                <div class="policy-card">
+                    <h3 data-i18n="privacy_feat4_h"></h3>
+                    <p data-i18n="privacy_feat4_p"></p>
+                </div>
+                <div class="policy-card">
+                    <h3 data-i18n="privacy_feat5_h"></h3>
+                    <p data-i18n="privacy_feat5_p"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security & Disclaimer Section -->
+        <section class="policy-section animate">
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem; border-left: 4px solid var(--secondary); padding-left: 1.5rem;"
+                data-i18n="legal_disclaimer_h">State-Level Security Disclaimer</h2>
+            <div class="policy-card" style="margin-top: 2rem;">
+                <p data-i18n="legal_disclaimer_p"></p>
+            </div>
+
+            <div class="warning-box">
+                <h4 data-i18n="legal_user_error_h">User Responsibility & Error Identification</h4>
+                <p data-i18n="legal_user_error_p"
+                    style="margin-bottom: 1rem; color: var(--text-main); font-weight: 500;"></p>
+                <div data-i18n-html="legal_user_error_list" style="color: var(--text-dim); line-height: 1.8;"></div>
+            </div>
+        </section>
+       <!-- Security Statement -->
+        <section class="policy-section animate">
+    <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem; border-left: 4px solid var(--secondary); padding-left: 1.5rem;"
+        data-i18n="security_title">
+    </h2>
+
+    <div class="policy-card" style="margin-top: 2rem;">
+        <p data-i18n="security_intro"></p>
+    </div>
+
+    <div class="warning-box">
+        <h4 data-i18n="security_feat1_h"></h4>
+        <p data-i18n="security_feat1_p"
+           style="margin-bottom: 1rem; color: var(--text-main); font-weight: 500;"></p>
+
+        <h4 data-i18n="security_feat2_h"></h4>
+        <p data-i18n="security_feat2_p"
+           style="margin-bottom: 1rem; color: var(--text-main); font-weight: 500;"></p>
+
+        <h4 data-i18n="security_feat3_h"></h4>
+        <p data-i18n="security_feat3_p"
+           style="margin-bottom: 1rem; color: var(--text-main); font-weight: 500;"></p>
+
+        <h4 data-i18n="security_feat4_h"></h4>
+        <p data-i18n="security_feat4_p"
+           style="margin-bottom: 1rem; color: var(--text-main); font-weight: 500;"></p>
+
+        <h4 data-i18n="security_feat5_h"></h4>
+        <p data-i18n="security_feat5_p"
+           style="color: var(--text-main); font-weight: 500;"></p>
+    </div>
+</section>
+
+
+        <!-- Best Use Section -->
+        <section class="policy-section animate">
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem; border-left: 4px solid var(--accent); padding-left: 1.5rem;"
+                data-i18n="legal_best_use_h">Best Use Recommendation</h2>
+            <div class="policy-card" style="margin-top: 2rem;">
+                <p data-i18n="legal_best_use_p"></p>
+            </div>
+        </section>
+
+        <!-- Legal FAQ Section -->
+        <section class="legal-faq animate">
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 3rem; text-align: center;" data-i18n="legal_faq_h">
+                Legal & Compliance FAQ</h2>
+            <div class="legal-faq-item">
+                <div class="legal-faq-q" data-i18n="legal_faq_q1"></div>
+                <div class="legal-faq-a" data-i18n="legal_faq_a1"></div>
+            </div>
+            <div class="legal-faq-item">
+                <div class="legal-faq-q" data-i18n="legal_faq_q2"></div>
+                <div class="legal-faq-a" data-i18n="legal_faq_a2"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                    <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pageLoader');
+            setTimeout(() => {
+                loader.classList.add('loaded');
+            }, 800);
+        });
+    </script>
+</body>
+
+</html>

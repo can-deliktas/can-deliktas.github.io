@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage Guide | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="padding-top: 150px;">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 8rem; text-align: center;">
+            <h1 style="font-size: 5rem; margin-bottom: 1.5rem;" data-i18n="usage_h1">GUI Command & Control</h1>
+            <p style="font-size: 1.3rem; color: var(--text-dim);" data-i18n="usage_p">Master the interface designed for
+                professional-grade identity management.</p>
+        </header>
+
+        <section class="grid-2" style="align-items: center; margin-bottom: 8rem;">
+            <div class="glass-card animate">
+                <h2 class="grad-text" style="font-size: 2.5rem; margin-bottom: 2rem;" data-i18n="usage_nav_h">Dynamic
+                    Vault Navigation</h2>
+                <p style="font-size: 1.15rem; color: var(--text-dim); line-height: 1.8; margin-bottom: 2rem;"
+                    data-i18n="usage_nav_p">Our relational mapping allows for sub-atomic folder control and
+                    zero-footprint categorization. Entries are linked via asymmetric IDs, ensuring even if a partial
+                    database is leaked, the structure remains obfuscated.</p>
+                <ul style="color: var(--accent); padding-left: 1.5rem; line-height: 2;">
+                    <li data-i18n="usage_id_mapping">Relational ID Mapping</li>
+                    <li data-i18n="usage_cascading_category">Cascading Category Renames</li>
+                    <li data-i18n="usage_real_time">Real-time Entropy Evaluation</li>
+                </ul>
+            </div>
+            <div class="scanner-box animate" style="animation-delay: 0.2s;">
+                <img src="images/vault.png" style="width: 100%; border-radius: 40px;" alt="Vault Management">
+            </div>
+        </section>
+
+        <section class="grid-2" style="align-items: center; margin-bottom: 8rem;">
+            <div class="scanner-box animate" style="order: 2;">
+                <img src="images/security.png" style="width: 100%; border-radius: 40px;" alt="Security Shield">
+            </div>
+            <div class="glass-card animate" style="animation-delay: 0.2s; order: 1;">
+                <h2 class="grad-text" style="font-size: 2.5rem; margin-bottom: 2rem;" data-i18n="usage_auto_h">Automated
+                    Defense Protocols</h2>
+                <p style="font-size: 1.15rem; color: var(--text-dim); line-height: 1.8;" data-i18n="usage_auto_p">
+                    Configure autonomous timers. If the system detects zero user interaction, the vault undergoes
+                    immediate memory sanitation. All cryptographic handles are destroyed, requiring a full
+                    re-authentication.</p>
+                <div style="margin-top: 3rem;">
+                    <a href="security.html" class="btn btn-outline" data-i18n="nav_security">Explore Security
+                        Architecture</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 10rem; padding-bottom: 10rem;">
+            <div class="grid-2">
+                <div class="glass-card">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;" data-i18n="usage_lock_h">Unmanned Auto-Lock</h3>
+                    <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="usage_lock_p">A state-free
+                        monitoring loop. The moment user interaction ceases, the vault is completely purged from memory.
+                        No traces. No vulnerabilities. This happens without any user input.</p>
+                </div>
+                <div class="glass-card">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;" data-i18n="usage_clip_h">Smart Clipboard
+                        Sanitation</h3>
+                    <p style="color: var(--text-dim); line-height: 1.8;" data-i18n="usage_clip_p">Upon data copy, a
+                        high-priority task overwrites the OS clipboard after your selected threshold (10-60s). This
+                        ensures passwords don't reside in memory longer than necessary.</p>
+                </div>
+            </div>
+        </section>
+        <section style="margin-top: 10rem; padding-bottom: 5rem;">
+            <header style="text-align: center; margin-bottom: 5rem;">
+                <h2 class="grad-text" style="font-size: 3.5rem; margin-bottom: 1.5rem;" data-i18n="preview_gallery_h">
+                    Visual Interface Gallery</h2>
+            </header>
+
+            <div class="grid-2">
+                <!-- Authentication -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_giris_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(0)">
+                        <img src="önizleme-tr/giriş.png" alt="Giriş" class="gallery-img" data-i18n-alt="preview_giris_h"
+                            data-i18n-src="src_preview_login">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_auth_p"></p>
+                </div>
+
+                <!-- Verification -->
+                <div class="glass-card animate" style="animation-delay: 0.1s;">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_kasa_yolu_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(1)">
+                        <img src="önizleme-tr/kasa-dogrulama.png" alt="Doğrulama" class="gallery-img"
+                            data-i18n-alt="preview_kasa_yolu_h" data-i18n-src="src_preview_vault_auth">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_verify_p"></p>
+                </div>
+
+                <!-- Active Vault -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_aktif_kasa_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(2)">
+                        <img src="önizleme-tr/aktif-kasa.png" alt="Aktif Kasa" class="gallery-img"
+                            data-i18n-alt="preview_aktif_kasa_h" data-i18n-src="src_preview_active_vault">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_aktif_kasa_p"></p>
+                </div>
+
+                <!-- Folder Hierarchy -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_folders_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(3)">
+                        <img src="önizleme-tr/alt-klasör-ekle.png" alt="Klasör Yapısı" class="gallery-img"
+                            data-i18n-alt="preview_folders_h" data-i18n-src="src_preview_subfolder">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_folders_p"></p>
+                </div>
+
+                <!-- Password Generator -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_sifre_uretimi_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(4)">
+                        <img src="önizleme-tr/üretec.png" alt="Şifre Üretimi" class="gallery-img"
+                            data-i18n-alt="preview_sifre_uretimi_h" data-i18n-src="src_preview_generator">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_gen_p"></p>
+                </div>
+
+                <!-- Recycle Bin -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_trash_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(5)">
+                        <img src="önizleme-tr/geri-donusum.png" alt="Çöp Kutusu" class="gallery-img"
+                            data-i18n-alt="preview_trash_h" data-i18n-src="src_preview_recycle">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_trash_p"></p>
+                </div>
+
+                <!-- Settings -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_ayarlar_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(6)">
+                        <img src="önizleme-tr/ayarlar.png" alt="Ayarlar" class="gallery-img"
+                            data-i18n-alt="preview_ayarlar_h" data-i18n-src="src_preview_settings">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_settings_p"></p>
+                </div>
+
+                <!-- Root Folder -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_root_h">Root Management
+                    </h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(8)">
+                        <img src="önizleme-tr/kök-klasör-ekle.png" alt="Root" class="gallery-img"
+                            data-i18n-alt="preview_root_h" data-i18n-src="src_preview_root_folder">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_root_p">Initialize secure root namespaces for
+                        different identity sets.</p>
+                </div>
+
+                <!-- Save & Edit -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_save_h">Encryption Sync
+                    </h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(9)">
+                        <img src="önizleme-tr/kaydet-duzenle.png" alt="Edit" class="gallery-img"
+                            data-i18n-alt="preview_save_h" data-i18n-src="src_preview_save_edit">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_save_p">Seamlessly update and encrypt existing
+                        credentials without exposure.</p>
+                </div>
+
+                <!-- Copy -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_copy_card_h">Secure
+                        Extraction</h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(10)">
+                        <img src="önizleme-tr/kopyala.png" alt="Copy" class="gallery-img"
+                            data-i18n-alt="preview_copy_card_h" data-i18n-src="src_preview_copy">
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_copy_card_p">One-click extraction with
+                        automated
+                        clipboard wipe protection.</p>
+                </div>
+
+                <!-- Themes -->
+                <div class="glass-card animate">
+                    <h3 style="color: var(--accent); margin-bottom: 1.5rem;" data-i18n="preview_themes_h"></h3>
+                    <div class="scanner-box no-scan" style="margin-bottom: 2rem; cursor: pointer;"
+                        onclick="openGallery(7)">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <img src="önizleme-tr/tema1.png" style="width: 100%;" alt="Theme 1" class="gallery-img"
+                                data-i18n-alt="preview_themes_h" data-i18n-src="src_preview_theme1">
+                            <img src="önizleme-tr/tema2.png" style="width: 100%;" alt="Theme 2" class="gallery-img"
+                                data-i18n-alt="preview_themes_h" data-i18n-src="src_preview_theme2">
+                            <img src="önizleme-tr/tema3.png" style="width: 100%;" alt="Theme 3" class="gallery-img"
+                                data-i18n-alt="preview_themes_h" data-i18n-src="src_preview_theme3">
+                            <img src="önizleme-tr/tema4.png" style="width: 100%;" alt="Theme 4" class="gallery-img"
+                                data-i18n-alt="preview_themes_h" data-i18n-src="src_preview_theme4">
+                            <img src="önizleme-tr/tema5.png" style="width: 100%;" alt="Theme 5" class="gallery-img"
+                                data-i18n-alt="preview_themes_h" data-i18n-src="src_preview_theme5">
+                            <img src="önizleme-tr/tema6.png" style="width: 100%;" alt="Theme 6" class="gallery-img"
+                                data-i18n-alt="preview_themes_h" data-i18n-src="src_preview_theme6">
+                            <img src="önizleme-tr/tema7.png" style="width: 100%;" alt="Theme 7" class="gallery-img"
+                                data-i18n-alt="preview_themes_h" data-i18n-src="src_preview_theme7">
+                        </div>
+                    </div>
+                    <p style="color: var(--text-dim);" data-i18n="preview_themes_p"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gallery Lightbox -->
+    <div class="modal-overlay" id="galleryModal">
+        <div class="lightbox-content">
+            <span class="modal-close" onclick="closeGallery()">&times;</span>
+            <img id="lightboxImg" class="lightbox-img" src="" alt="Zoomed Preview">
+            <div class="lightbox-nav">
+                <span onclick="changeImage(-1)">&#10094;</span>
+                <span onclick="changeImage(1)">&#10095;</span>
+            </div>
+        </div>
+    </div>
+
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        let currentImageIndex = 0;
+        function getGalleryImages() {
+            const lang = localStorage.getItem('passforge_lang') || 'en';
+            const s = translations[lang];
+            return [
+                s.src_preview_login,
+                s.src_preview_vault_auth,
+                s.src_preview_active_vault,
+                s.src_preview_subfolder,
+                s.src_preview_generator,
+                s.src_preview_recycle,
+                s.src_preview_settings,
+                s.src_preview_theme1,
+                s.src_preview_theme2,
+                s.src_preview_theme3,
+                s.src_preview_theme4,
+                s.src_preview_theme5,
+                s.src_preview_theme6,
+                s.src_preview_theme7,
+                s.src_preview_root_folder,
+                s.src_preview_save_edit,
+                s.src_preview_copy
+            ];
+        }
+
+        function openGallery(index) {
+            currentImageIndex = index;
+            const images = getGalleryImages();
+            const modal = document.getElementById('galleryModal');
+            const img = document.getElementById('lightboxImg');
+            img.src = images[currentImageIndex];
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(step) {
+            const images = getGalleryImages();
+            currentImageIndex += step;
+            if (currentImageIndex >= images.length) currentImageIndex = 0;
+            if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+            document.getElementById('lightboxImg').src = images[currentImageIndex];
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('galleryModal').classList.contains('active')) return;
+            if (e.key === 'ArrowRight') changeImage(1);
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'Escape') closeGallery();
+        });
+
+        // Close on click outside
+        document.getElementById('galleryModal').addEventListener('click', (e) => {
+            if (e.target.id === 'galleryModal') closeGallery();
+        });
+
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 600);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

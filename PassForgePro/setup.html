@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup | PassForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="padding-top: 150px;">
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">PASSFORGE</div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text" data-i18n="loader_text">Initializing Secure Environment</div>
+    </div>
+
+            <nav>
+        <a href="index.html" class="logo" data-i18n="logo_text">PASSFORGE PRO</a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="setup.html" data-i18n="nav_setup">Setup</a>
+            <a href="usage.html" data-i18n="nav_usage">Usage</a>
+            <a href="security.html" data-i18n="nav_security">Security</a>
+            <a href="developer.html" data-i18n="nav_developer">Developer</a>
+            <a href="manifesto.html" data-i18n="nav_manifesto">Manifesto</a>
+            <a href="faq.html" data-i18n="nav_faq">SSS</a>
+            <div class="lang-switcher">
+                <div class="lang-btn" onclick="setLanguage('en')">EN</div>
+                <div class="lang-btn" onclick="setLanguage('tr')">TR</div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header style="margin-bottom: 8rem; text-align: center;">
+            <h1 style="font-size: 5rem; margin-bottom: 1.5rem;" data-i18n="setup_h1">Installation & System
+                Initialization</h1>
+            <p style="font-size: 1.3rem; color: var(--text-dim);" data-i18n="setup_p">Deploy PassForge Pro across your
+                infrastructure with zero friction.</p>
+        </header>
+
+        <div class="glass-card animate" style="margin-bottom: 6rem; border-left: 10px solid var(--accent);">
+            <h2 class="grad-text" style="font-size: 2.5rem; margin-bottom: 2rem;" data-i18n="setup_pre">System
+                Requirements</h2>
+            <p style="font-size: 1.3rem; color: var(--text-main); font-weight: 600; line-height: 1.8;"
+                data-i18n="setup_pre_list">Windows Architecture, Python Interface, Admin Privileges. PassForge Pro
+                requires a clean environment to establish its encrypted substrate.</p>
+        </div>
+
+        <div class="grid-3 animate" style="animation-delay: 0.2s;">
+            <div class="glass-card" style="position: relative;">
+                <h3 style="margin-bottom: 2rem;" data-i18n="setup_step1">Clone Core Repository</h3>
+                <div class="copy-badge" data-i18n="copy_label"
+                    onclick="copyText('git clone https://github.com/can-deliktas/PassforgeV2.git', this)">COPY</div>
+                <pre
+                    style="background: #000; padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); color: var(--accent); overflow-x: auto; font-family: monospace;">git clone https://github.com/can-deliktas/PassforgeV2.git</pre>
+            </div>
+            <div class="glass-card" style="position: relative;">
+                <h3 style="margin-bottom: 2rem;" data-i18n="setup_step2">Sync Dependencies</h3>
+                <div class="copy-badge" data-i18n="copy_label"
+                    onclick="copyText('pip install -r requirements.txt', this)">COPY</div>
+                <pre
+                    style="background: #000; padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); color: var(--accent); overflow-x: auto; font-family: monospace;">pip install -r requirements.txt</pre>
+            </div>
+            <div class="glass-card" style="position: relative;">
+                <h3 style="margin-bottom: 2rem;" data-i18n="setup_step3">Initialize Bootloader</h3>
+                <div class="copy-badge" data-i18n="copy_label" onclick="copyText('python PassForgePro.py', this)">COPY
+                </div>
+                <pre
+                    style="background: #000; padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); color: var(--accent); overflow-x: auto; font-family: monospace;">python PassForgePro.py</pre>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <a href="usage.html" class="btn btn-outline" style="font-size: 1.2rem;" data-i18n="hero_btn_tour">Master the
+                Interface</a>
+        </div>
+
+        <div class="glass-card animate"
+            style="margin-top: 8rem; border-color: rgba(255, 68, 68, 0.4); background: rgba(255, 68, 68, 0.05); animation-delay: 0.4s;">
+            <p style="color: #FF5555; font-weight: 800; font-size: 1.3rem; text-align: center; line-height: 1.8;"
+                data-i18n="setup_note">SECURITY ADVISORY: The application performs a recursive stealth elevation. Ensure
+                your antivirus allows authorized system-space modifications.</p>
+        </div>
+    </main>
+
+            <footer style="margin-top: 100px;">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 4rem;">
+            <div>
+                <a href="index.html" class="logo" style="margin-bottom: 2rem; display: block;">PASSFORGE PRO</a>
+                <div style="margin-bottom: 1rem;">
+                    <span style="color: var(--accent); font-weight: 900; font-size: 0.7rem; letter-spacing: 2px;"
+                        data-i18n="owner_label">AUTHOR:</span>
+                    <p style="color: var(--text-main); font-weight: 700; margin-top: 5px;" data-i18n="owner_name">Can
+                        Arkadaş Deliktaş</p>
+                </div>
+                <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 2rem;" data-i18n="footer_copy"></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_more">MORE</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="faq.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_faq">SSS</a>
+                    <a href="future.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_future">Future</a>
+                <a href="legal.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;" data-i18n="nav_legal">Legal</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_community">COMMUNITY</h4>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="acknowledgements.html"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_credits">Credits</a>
+                    <a href="contribute.html" style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem;"
+                        data-i18n="nav_contribute">Contribute</a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 0.8rem; letter-spacing: 2px;"
+                    data-i18n="footer_social">SOCIAL</h4>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="mailto:can.deliktas@protonmail.com"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>📧</span> can.deliktas@protonmail.com
+                    </a>
+                    <a href="https://can-deliktas.github.io" target="_blank"
+                        style="color: var(--text-dim); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; gap: 10px;">
+                        <span>💻</span> can-deliktas.github.io
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+        function copyText(text, btn) {
+            navigator.clipboard.writeText(text);
+            const originalText = btn.innerText;
+            const lang = document.documentElement.lang || 'en';
+            btn.innerText = (translations[lang] && translations[lang].copied_feedback) ? translations[lang].copied_feedback : 'COPIED!';
+            btn.style.background = '#34C759';
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = 'var(--accent)';
+            }, 2000);
+        }
+        // Page loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('loaded');
+            }, 600);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
