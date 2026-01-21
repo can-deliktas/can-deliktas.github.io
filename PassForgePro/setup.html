@@ -59,18 +59,11 @@
         <div class="grid-3 animate" style="animation-delay: 0.2s;">
             <div class="glass-card" style="position: relative;">
                 <h3 style="margin-bottom: 2rem;" data-i18n="setup_step1">Clone Core Repository</h3>
-                <div class="copy-badge" data-i18n="copy_label"
-                    onclick="copyText('git clone https://github.com/can-deliktas/PassForgePro.git', this)">COPY</div>
-                <pre
-                    style="background: #000; padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); color: var(--accent); overflow-x: auto; font-family: monospace;">git clone https://github.com/can-deliktas/PassForgePro.git</pre>
-            </div>
-                    <div class="grid-3 animate" style="animation-delay: 0.2s;">
-            <div class="glass-card" style="position: relative;">
                 <h3 style="margin-bottom: 2rem;" data-i18n="setup_step_switch">Switch to Project Directory</h3>
                 <div class="copy-badge" data-i18n="copy_label"
-                    onclick="copyText('cd PassForgePro', this)">COPY</div>
+                    onclick="copyText('git clone https://github.com/can-deliktas/PassForgePro.git && cd PassForgePro', this)">COPY</div>
                 <pre
-                    style="background: #000; padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); color: var(--accent); overflow-x: auto; font-family: monospace;">cd PassForgePro</pre>
+                    style="background: #000; padding: 2rem; border-radius: 20px; border: 1px solid var(--glass-border); color: var(--accent); overflow-x: auto; font-family: monospace;">git clone https://github.com/can-deliktas/PassForgePro.git && cd PassForgePro</pre>
             </div>
             <div class="glass-card" style="position: relative;">
                 <h3 style="margin-bottom: 2rem;" data-i18n="setup_step2">Sync Dependencies</h3>
@@ -180,6 +173,7 @@
 </body>
 
 </html>
+
 
 
 
