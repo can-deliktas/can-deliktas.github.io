@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Portfolio -->
+  <url>
+    <loc>https://can-deliktas.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Primary Product -->
+  <url>
+    <loc>https://can-deliktas.github.io/PassForgePro/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Secondary / Legacy Projects -->
+  <url>
+    <loc>https://can-deliktas.github.io/PassForge/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://can-deliktas.github.io/WebKitApps/</loc>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
