@@ -30,7 +30,7 @@
 
 Şu anda Siber Güvenlik ve Açık Kaynak alanında çeşitli projeler üzerinde çalışıyorum. Odaklandıklarımdan bazıları:
 
-- **[PassForge](https://github.com/can-deliktas/PassForge)**:  Python ile yazılmış, güçlü ve özelleştirilebilir bir şifre oluşturucu ve şifre gücü değerlendirici "ParolaAtölyesi" . Şifre güvenliğini artırmaya odaklanır, kolay kullanılabilir özellikler sunar (güç değerlendirmesi, panoya kopyalama vb.).
+- **[PassForgePro](https://github.com/can-deliktas/PassForgePro)**: Python'da yerleşik güvenli parola kasası, sıfır bilgi, öncelikli yerel parola kasası. PassForge Pro, kimlik bilgilerinizi AES-256 şifreleme, uyarlanabilir anahtar türetme, bellek silme ve hacker karşıtı özelliklerle (bulut yok, telemetri yok, tam dijital egemenlik) korur.
 - **Siber Güvenlik Araçları**: Sistemleri analiz etmek ve güvenliğini sağlamak için çeşitli betikler ve araçlar geliştiriyorum, ayrıca zafiyetleri araştırıyor ve çözümler üretiyorum.
 - **Açık Kaynak Katkıları**: Siber güvenlik ve gizlilikle ilgili projelere aktif katkıda bulunuyorum, bilgi paylaşıyor ve topluluk odaklı araçları geliştiriyorum.
 - **Web Geliştirme**: Güvenlik odaklı full-stack geliştirmeyi keşfediyor, güvenli ve optimize edilmiş web uygulamaları oluşturmayı hedefliyorum.
