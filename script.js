@@ -9,6 +9,9 @@ const translations = {
         hero_role_text: "< Junior Cyber Security | Open Source Contributor />",
         hero_greeting_text: "Hi, I'm Can Arkadaş Deliktaş",
 
+        cta_launch: "Launch PassForge Pro",
+        cta_details: "View Details",
+        
         hero_bio: "I am a developer dedicated to building secure, efficient, and open-source solutions. My focus ranges from cybersecurity tools to full-stack web applications, always aiming for precision and innovation.",
         hero_cta: "View Latest Work",
 
@@ -56,6 +59,9 @@ const translations = {
         hero_role_text: "< Junior Siber Güvenlik | Açık Kaynak Geliştirici />",
         hero_greeting_text: "Merhaba, Ben Can Arkadaş Deliktaş",
 
+        cta_launch: "PassForge Pro’yu Başlat",
+        cta_details: "Detayları Gör",
+        
         hero_bio: "Güvenli, verimli ve açık kaynaklı çözümler oluşturmaya kendini adamış bir geliştiriciyim. Odak noktam, siber güvenlik araçlarından tam yığın web uygulamalarına kadar uzanıyor ve her zaman hassasiyet ve yeniliği hedefliyorum.",
         hero_cta: "Son Çalışmaları Gör",
 
@@ -291,3 +297,4 @@ function setRandomBackground() {
         bgOverlay.style.backgroundImage = `url('image/${randomImg}')`;
     };
 }
+
