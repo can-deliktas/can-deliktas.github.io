@@ -674,7 +674,10 @@ section {
     background: #E94E34;
     color: #fff;
 }
-
+.coderlegion {
+    background: #1d9bf0;
+    color: #fff;
+}
 /* Footer */
 .footer {
     padding: 3rem 0;
@@ -727,3 +730,4 @@ section {
 
 
 }
+
