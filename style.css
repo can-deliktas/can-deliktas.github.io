@@ -717,4 +717,13 @@ section {
     .logo-text {
         font-size: 1.1rem;
     }
+    .seo-link {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
 }
