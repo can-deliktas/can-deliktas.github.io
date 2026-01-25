@@ -31,7 +31,7 @@
 
 I am currently working on various exciting projects in the field of Cybersecurity and Open Source. Here are a few that I'm focusing on:
 
-- **[PassForge](https://github.com/can-deliktas/PassForge)**: A powerful and customizable password generator and strength evaluator written in Python, focused on enhancing password security through easy-to-use features like strength evaluation and clipboard integration.
+- **[PassForgePro](https://github.com/can-deliktas/PassForgePro)**: Secure password vault, zero-knowledge, local-first password vault built in Python. PassForge Pro secures your credentials with AES-256 encryption, adaptive key derivation, memory wiping, and anti-forensic features—no cloud, no telemetry, total digital sovereignty.
 - **Cybersecurity Tools**: Developing various scripts and tools to analyze and secure systems, as well as exploring vulnerabilities and solutions.
 - **Contributing to Open Source**: Actively contributing to projects related to cybersecurity and privacy, sharing knowledge, and enhancing community-driven tools.
 - **Web Development**: Exploring full-stack development with a focus on security, aiming to create secure and optimized web applications.
