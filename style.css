@@ -678,6 +678,10 @@ section {
     background: #2596be;
     color: #fff;
 }
+.hackernews-btn {
+    background: #FF6600;
+    color: #fff;
+}
 
 /* Footer */
 .footer {
@@ -731,6 +735,7 @@ section {
 
 
 }
+
 
 
 
