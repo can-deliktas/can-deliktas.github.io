@@ -1,8 +1,8 @@
 // Translations
 const translations = {
     en: {
-        Turk: "Ne Mutlu Türküm Diyene!",
-        AtaTurk: "Ulu Önder Gazi Mustafa Kemal ATATÜRK",
+        turk: "Ne Mutlu Türküm Diyene!",
+        ataturk: "Ulu Önder Gazi Mustafa Kemal ATATÜRK",
         page_title: "Can Arkadaş Deliktaş | Cyber Security & Development",
 
         nav_projects: "Projects",
@@ -55,8 +55,8 @@ const translations = {
         proj_ai: "Artificial Intelligence and Machine Learning"
     },
     tr: {
-        Turk: "Ne Mutlu Türküm Diyene!",
-        AtaTurk: "Ulu Önder Gazi Mustafa Kemal ATATÜRK",
+        turk: "Ne Mutlu Türküm Diyene!",
+        ataturk: "Ulu Önder Gazi Mustafa Kemal ATATÜRK",
         page_title: "Can Arkadaş Deliktaş | Siber Güvenlik & Geliştirme",
 
         nav_projects: "Projeler",
@@ -309,6 +309,7 @@ function setRandomBackground() {
         bgOverlay.style.backgroundImage = `url('image/${randomImg}')`;
     };
 }
+
 
 
 
