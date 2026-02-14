@@ -155,7 +155,13 @@ const projects = [
     }
 ];
 
-let currentLang = localStorage.getItem('lang') || 'en';
+let currentLang = localStorage.getItem('lang');
+
+if (!currentLang) {
+    currentLang = 'tr';
+    localStorage.setItem('lang', 'tr');
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -297,4 +303,5 @@ function setRandomBackground() {
         bgOverlay.style.backgroundImage = `url('image/${randomImg}')`;
     };
 }
+
 
