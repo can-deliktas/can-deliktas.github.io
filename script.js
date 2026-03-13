@@ -296,8 +296,6 @@ function typeWriterEffect() {
 function setRandomBackground() {
     const bgOverlay = document.getElementById('bg-overlay');
     const backgrounds = [
-        'bg_1_1769187119450.png', 'bg_2_1769187134657.png',
-        'bg_3_1769187150685.png', 'bg_4_1769187256809.png',
         '1.jpg', '2.jpg', '3.jpg', '4.jpg'
     ];
     // Simple random
@@ -309,6 +307,7 @@ function setRandomBackground() {
         bgOverlay.style.backgroundImage = `url('image/${randomImg}')`;
     };
 }
+
 
 
 
